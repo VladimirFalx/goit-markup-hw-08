@@ -1,0 +1,21 @@
+.header {
+  background-color: $color-white;
+  border-bottom: solid 1px #ececec;
+
+  & > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: inherit;
+    padding: 0 0;
+  }
+
+  &__logo {
+    margin-right: 93px;
+  }
+}

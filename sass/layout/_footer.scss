@@ -1,0 +1,15 @@
+.footer {
+  padding: 60px 0;
+  background-color: $color-main-bg;
+}
+
+.footer-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer__logo {
+  display: block;
+  margin-bottom: 20px;
+  margin-right: 0;
+}

@@ -1,0 +1,24 @@
+@import './base/common';
+@import './base/reset';
+@import './utils/variables';
+@import './utils/hidden';
+
+//LAYOUT
+@import './layout/header';
+@import './layout/footer';
+
+//COMPONENTS
+@import './components/modal-window';
+@import './components/logo';
+@import './components/pages';
+@import './components/header-contacts';
+@import './components/footer-address';
+@import './components/footer-social';
+@import './components/footer-subscribe';
+@import './components/hero';
+@import './components/benefits';
+@import './components/skills';
+@import './components/team';
+@import './components/clients';
+@import './components/buttons';
+@import './components/works';

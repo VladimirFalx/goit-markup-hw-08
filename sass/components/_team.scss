@@ -1,0 +1,90 @@
+.team {
+  background-color: $color-second-bg;
+}
+
+.team__title {
+  margin: 0 0 50px;
+  padding: 0 0;
+  font-size: 36px;
+  line-height: calc(42 / 36);
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $color-main;
+}
+
+.team__list {
+  margin: 0 0;
+  padding: 0 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.team__item {
+  margin: 0 0;
+  padding: 0 0;
+  width: 270px;
+  background-color: $color-white;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team__partner {
+  padding: 30px 0;
+  text-align: center;
+}
+
+.team__name {
+  margin: 0 0 10px;
+  padding: 0 0;
+  font-weight: 500;
+  font-size: $font-second;
+  line-height: calc(19 / 16);
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $color-main;
+}
+
+.team__role {
+  margin: 0 0 16px;
+  padding: 0 0;
+  font-size: $font-second;
+  line-height: calc(19 / 16);
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $color-text;
+}
+
+.team__contacts-list {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+
+  & :not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.team__contacts-link {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: $color-fill;
+  transition-property: color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
+
+  &:hover,
+  &:focus {
+    background-color: $color-accent;
+    color: $color-white;
+  }
+}
+
+.team__contacts-icon {
+  margin: auto;
+  fill: currentColor;
+}

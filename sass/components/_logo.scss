@@ -1,0 +1,19 @@
+.logo {
+  font-family: 'raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: calc(31 / 26);
+  letter-spacing: 0.03em;
+  color: $color-accent;
+}
+
+.logo {
+  &__ender--dark {
+    color: $color-main;
+  }
+
+  &__ender--light {
+    color: $color-white;
+  }
+}
