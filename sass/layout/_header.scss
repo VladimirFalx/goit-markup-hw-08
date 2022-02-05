@@ -8,14 +8,17 @@
     align-items: center;
     margin: auto;
   }
+}
 
-  &__nav {
-    display: flex;
-    align-items: inherit;
-    padding: 0 0;
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1200px) {
+  .header__logo {
+    margin-right: 93px;
   }
 
-  &__logo {
-    margin-right: 93px;
+  .header__menu {
+    flex-grow: 1;
   }
 }

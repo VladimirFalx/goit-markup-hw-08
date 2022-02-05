@@ -1,22 +1,22 @@
 .hero {
   margin: 0 0;
-  padding: 200px 0;
+  padding: 118px 0;
   background-color: $color-main-bg;
-  background-image: url(../images/hero-bg.jpg),
+  background-image: url(../images/mobile-hero-bg@1x.jpg),
     linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 1600px;
+  background-size: cover;
   text-align: center;
 }
 
 .hero__title {
-  max-width: 696px;
+  max-width: 360px;
   margin: 0 auto 30px;
   padding: 0;
   font-weight: 900;
-  font-size: 44px;
-  line-height: calc(60 / 44);
+  font-size: 26px;
+  line-height: calc(42 / 26);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: $color-white;
@@ -42,5 +42,53 @@
   &:hover,
   &:focus {
     background-color: #188ce8;
+  }
+}
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: url(../images/mobile-hero-bg@2x.jpg),
+      linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    background-image: url(../images/tablet-hero-bg@1x.jpg),
+      linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+  }
+}
+
+@media (min-width: 768px),
+  (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: url(../images/tablet-hero-bg@2x.jpg),
+      linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero {
+    padding: 200px 0;
+    background-color: $color-main-bg;
+    background-image: url(../images/hero-bg@1x.jpg),
+      linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+    &__title {
+      max-width: 696px;
+      font-size: 44px;
+      line-height: calc(60 / 44);
+    }
+  }
+}
+
+@media (min-width: 1200px),
+  (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: url(../images/hero-bg@1x.jpg),
+      linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
   }
 }

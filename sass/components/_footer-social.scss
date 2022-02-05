@@ -1,7 +1,8 @@
 .social {
   display: flex;
   flex-direction: column;
-  margin-left: 70px;
+  align-items: center;
+  margin-bottom: 60px;
 
   &__header {
     display: flex;
@@ -53,4 +54,17 @@
 .social__icon {
   margin: auto;
   fill: currentColor;
+}
+
+@media (min-width: 768px) {
+  .social {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .social {
+    align-items: flex-start;
+    margin-left: 70px;
+  }
 }

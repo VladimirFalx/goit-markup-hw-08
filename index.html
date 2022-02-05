@@ -23,20 +23,32 @@
   <body>
     <header class="header">
       <div class="container">
-        <nav class="header__nav">
-          <a class="logo header__logo" href="./index.html"
-            >Web<span class="logo__ender logo__ender--dark">Studio</span></a
-          >
-          <ul class="pages header__pages">
-            <li class="pages__item">
-              <a class="pages__link pages__link--active" href="./index.html">Студия</a>
-            </li>
-            <li class="pages__item">
-              <a class="pages__link" href="./portfolio.html">Портфолио</a>
-            </li>
-            <li class="pages__item"><a class="pages__link" href="">Контакты</a></li>
-          </ul>
-        </nav>
+        <a class="logo header__logo" href="./index.html"
+          >Web<span class="logo__ender logo__ender--dark">Studio</span></a
+        >
+        <button
+          class="menu__open js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          type="button"
+        >
+          <svg class="menu__icon" width="40" height="40">
+            <use href="./images/icons.svg#menu"></use>
+          </svg>
+        </button>
+        <div class="menu header__menu">
+          <nav class="menu__nav">
+            <ul class="pages menu__pages">
+              <li class="pages__item">
+                <a class="pages__link pages__link--active" href="./index.html">Студия</a>
+              </li>
+              <li class="pages__item">
+                <a class="pages__link" href="./portfolio.html">Портфолио</a>
+              </li>
+              <li class="pages__item"><a class="pages__link" href="">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
         <ul class="header-contacts">
           <li class="header-contacts__item">
             <a class="header-contacts__link" href="mailto:info@devstudio.com"
@@ -121,7 +133,8 @@
             <li class="skills__item">
               <img
                 class="skills__performance"
-                src="./images/coding.jpg"
+                srcset="./images/coding@1x.jpg 1x, ./images/coding@2x.jpg 2x"
+                src="./images/coding@1x.jpg"
                 alt="Пишет код за рабочим столом"
                 width="370"
                 height="294"
@@ -131,7 +144,8 @@
             <li class="skills__item">
               <img
                 class="skills__performance"
-                src="./images/mobileapp.jpg"
+                srcset="./images/mobileapp@1x.jpg 1x, ./images/mobileapp@2x.jpg 2x"
+                src="./images/mobileapp@1x.jpg"
                 alt="Разрабатывает интерфейс приложения для смартфона"
                 width="370"
                 height="294"
@@ -141,7 +155,8 @@
             <li class="skills__item">
               <img
                 class="skills__performance"
-                src="./images/webdesign.jpg"
+                srcset="./images/webdesign@1x.jpg 1x, ./images/webdesign@2x.jpg 2x"
+                src="./images/webdesign@1x.jpg"
                 alt="Веб-дизайнер работает над цветом"
                 width="370"
                 height="294"
@@ -157,13 +172,18 @@
           <ul class="team__list">
             <li class="team__item">
               <div>
-                <img
-                  class="team__img"
-                  src="./images/ihor.jpg"
-                  alt="Игорь Демьяненко"
-                  width="270"
-                  height="260"
-                />
+                <picture>
+                  <source
+                    srcset="./images/ihor@1x.jpg 1x, ./images/ihor@2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="./images/tablet-ihor@1x.jpg 1x, ./images/tablet-ihor@2x.jpg 2x"
+                    media="(min-width: 768px)"
+                  />
+                  <source srcset="./images/mobile-ihor@1x.jpg 1x, ./images/mobile-ihor@2x.jpg 2x" />
+                  <img class="team__img" src="./images/ihor@1x.jpg" alt="Игорь Демьяненко" />
+                </picture>
               </div>
               <div class="team__partner">
                 <h3 class="team__name">Игорь Демьяненко</h3>
@@ -222,13 +242,18 @@
             </li>
             <li class="team__item">
               <div>
-                <img
-                  class="team__img"
-                  src="./images/olha.jpg"
-                  alt="Ольга Репина"
-                  width="270"
-                  height="260"
-                />
+                <picture>
+                  <source
+                    srcset="./images/olha@1x.jpg 1x, ./images/olha@2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="./images/tablet-olha@1x.jpg 1x, ./images/tablet-olha@2x.jpg 2x"
+                    media="(min-width: 768px)"
+                  />
+                  <source srcset="./images/mobile-olha@1x.jpg 1x, ./images/mobile-olha@2x.jpg 2x" />
+                  <img class="team__img" src="./images/olha@1x.jpg" alt="Ольга Репина" />
+                </picture>
               </div>
               <div class="team__partner">
                 <h3 class="team__name">Ольга Репина</h3>
@@ -287,13 +312,20 @@
             </li>
             <li class="team__item">
               <div>
-                <img
-                  class="team__img"
-                  src="./images/nikolay.jpg"
-                  alt="Николай Тарасов"
-                  width="270"
-                  height="260"
-                />
+                <picture>
+                  <source
+                    srcset="./images/nikolay@1x.jpg 1x, ./images/nikolay@2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="./images/tablet-nikolay@1x.jpg 1x, ./images/tablet-nikolay@2x.jpg 2x"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="./images/mobile-nikolay@1x.jpg 1x, ./images/mobile-nikolay@2x.jpg 2x"
+                  />
+                  <img class="team__img" src="./images/nikolay@1x.jpg" alt="Николай Тарасов" />
+                </picture>
               </div>
               <div class="team__partner">
                 <h3 class="team__name">Николай Тарасов</h3>
@@ -352,13 +384,20 @@
             </li>
             <li class="team__item">
               <div>
-                <img
-                  class="team__img"
-                  src="./images/mihail.jpg"
-                  alt="Михаил Ермаков"
-                  width="270"
-                  height="260"
-                />
+                <picture>
+                  <source
+                    srcset="./images/mihail@1x.jpg 1x, ./images/mihail@2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="./images/tablet-mihail@1x.jpg 1x, ./images/tablet-mihail@2x.jpg 2x"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="./images/mobile-mihail@1x.jpg 1x, ./images/mobile-mihail@2x.jpg 2x"
+                  />
+                  <img class="team__img" src="./images/mihail@1x.jpg" alt="Михаил Ермаков" />
+                </picture>
               </div>
               <div class="team__partner">
                 <h3 class="team__name">Михаил Ермаков</h3>
@@ -464,86 +503,88 @@
     </main>
     <footer class="footer">
       <div class="container footer-container">
-        <div>
-          <a class="logo footer__logo" href="./index.html"
-            >Web<span class="logo__ender logo__ender--light">Studio</span></a
-          >
-          <address class="address">
-            <ul class="address__list">
-              <li class="address__item">
-                <a
-                  class="address__link"
-                  href="https://goo.gl/maps/Qa92efD1YAJftuPJ8"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  ><span class="address__text">г. Киев, пр-т Леси Украинки, 26</span>
-                </a>
-              </li>
-              <li class="address__item">
-                <a class="address__link" href="mailto:info@devstudio.com">info@devstudio.com</a>
-              </li>
-              <li class="address__item">
-                <a class="address__link" href="tel:+380961111111">+38 096 111 11 11</a>
-              </li>
-            </ul>
-          </address>
-        </div>
-        <div class="social">
-          <div class="social__header">
-            <h2 class="visually-hidden">Социальные сети</h2>
-            <h3 class="social__title">присоединяйтесь</h3>
+        <div class="footer__contacts">
+          <div class="footer__section footer__main">
+            <a class="logo footer__logo" href="./index.html"
+              >Web<span class="logo__ender logo__ender--light">Studio</span></a
+            >
+            <address class="address">
+              <ul class="address__list">
+                <li class="address__item">
+                  <a
+                    class="address__link"
+                    href="https://goo.gl/maps/Qa92efD1YAJftuPJ8"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    ><span class="address__text">г. Киев, пр-т Леси Украинки, 26</span>
+                  </a>
+                </li>
+                <li class="address__item">
+                  <a class="address__link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                </li>
+                <li class="address__item">
+                  <a class="address__link" href="tel:+380961111111">+38 096 111 11 11</a>
+                </li>
+              </ul>
+            </address>
           </div>
-          <div>
-            <ul class="social__list">
-              <li class="social__item">
-                <a
-                  class="social__link"
-                  href="https://www.instagram.com/"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  <svg class="social__icon" width="20" height="20">
-                    <use href="./images/icons.svg#instagram"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social__item">
-                <a
-                  class="social__link"
-                  href="https://twitter.com/"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  <svg class="social__icon" width="20" height="20">
-                    <use href="./images/icons.svg#twitter"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social__item">
-                <a
-                  class="social__link"
-                  href="https://www.facebook.com/"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  <svg class="social__icon" width="20" height="20">
-                    <use href="./images/icons.svg#facebook"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social__item">
-                <a
-                  class="social__link"
-                  href="https://www.linkedin.com/"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  <svg class="social__icon" width="20" height="20">
-                    <use href="./images/icons.svg#linkedin"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
+          <div class="social footer__section">
+            <div class="social__header">
+              <h2 class="visually-hidden">Социальные сети</h2>
+              <h3 class="social__title">присоединяйтесь</h3>
+            </div>
+            <div>
+              <ul class="social__list">
+                <li class="social__item">
+                  <a
+                    class="social__link"
+                    href="https://www.instagram.com/"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    <svg class="social__icon" width="20" height="20">
+                      <use href="./images/icons.svg#instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a
+                    class="social__link"
+                    href="https://twitter.com/"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    <svg class="social__icon" width="20" height="20">
+                      <use href="./images/icons.svg#twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a
+                    class="social__link"
+                    href="https://www.facebook.com/"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    <svg class="social__icon" width="20" height="20">
+                      <use href="./images/icons.svg#facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a
+                    class="social__link"
+                    href="https://www.linkedin.com/"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    <svg class="social__icon" width="20" height="20">
+                      <use href="./images/icons.svg#linkedin"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <div class="subscribe">
@@ -597,7 +638,6 @@
               </svg>
             </div>
           </label>
-
           <label class="to-book__label"
             >Почта
             <div class="to-book__box">
@@ -632,6 +672,79 @@
         </form>
       </div>
     </div>
+    <div class="mobile-menu js-menu-container" id="mobile-menu">
+      <div class="mobile-menu__container container">
+        <button class="mobile-menu__close js-close-menu" type="button">
+          <svg class="mobile-menu__icon" width="40" height="40">
+            <use href="./images/icons.svg#menu-close"></use>
+          </svg>
+        </button>
+        <ul class="menu-pages mobile-menu__list">
+          <li class="mobile-menu__item">
+            <a class="menu-pages__link menu-pages__link--active" href="./index.html">Студия</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a class="menu-pages__link" href="./portfolio.html">Портфолио</a>
+          </li>
+          <li class="mobile-menu__item"><a class="menu-pages__link" href="">Контакты</a></li>
+        </ul>
+        <ul class="menu-contacts mobile-menu__list">
+          <li class="mobile-menu__item">
+            <a class="menu-contacts__phone" href="tel:+380961111111">+38 096 111 11 11</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a class="menu-contacts__mail" href="mailto:info@devstudio.com">info@devstudio.com</a>
+          </li>
+          <li class="menu-social mobile-menu__item">
+            <ul class="menu-social__list">
+              <li class="menu-social__item">
+                <a
+                  class="menu-social__link"
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >Instagram
+                </a>
+              </li>
+              <li class="menu-social__item">
+                <a
+                  class="menu-social__link"
+                  href="https://twitter.com/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >Twitter
+                </a>
+              </li>
+              <li class="menu-social__item">
+                <a
+                  class="menu-social__link"
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >Facebook
+                </a>
+              </li>
+              <li class="menu-social__item">
+                <a
+                  class="menu-social__link"
+                  href="https://www.linkedin.com/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >LinkedIn
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
     <script src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>

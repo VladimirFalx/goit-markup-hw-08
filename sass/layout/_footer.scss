@@ -5,11 +5,38 @@
 
 .footer-container {
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
 }
 
 .footer__logo {
   display: block;
   margin-bottom: 20px;
   margin-right: 0;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .footer__contacts {
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-around;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer-container {
+    flex-direction: row;
+    align-items: baseline;
+  }
+
+  .footer__contacts {
+    display: flex;
+    align-items: inherit;
+  }
 }
