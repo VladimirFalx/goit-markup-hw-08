@@ -306,6 +306,7 @@ ul li {
 
 .to-book__box {
   position: relative;
+  display: block;
   margin-top: 4px;
 }
 
